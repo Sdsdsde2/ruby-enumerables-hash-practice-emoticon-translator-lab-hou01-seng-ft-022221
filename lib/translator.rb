@@ -30,7 +30,7 @@ def get_japanese_emoticon(ymlpage, emoticon)
     end
     #binding.pry
   end
-  
+  return "Sorry, that emoticon was not found"
   #return j_emoji
 end
 
