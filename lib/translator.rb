@@ -20,7 +20,7 @@ end
 
 def get_japanese_emoticon(ymlpage, emoticon)
   # code goes here
-  j_emoji = ""
+  j_emoji = " "
   emoticons = load_library('./lib/emoticons.yml')
   emoticons.each_with_object({}) do |(key, value)|
     
