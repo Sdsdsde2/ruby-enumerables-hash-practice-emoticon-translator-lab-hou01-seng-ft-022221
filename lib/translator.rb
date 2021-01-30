@@ -11,7 +11,6 @@ def load_library(ymlpage)
   emoticons = YAML.load_file(ymlpage)
   emoticons.each_with_object({}) do |(key, value)|
     hash = {"#{key}" => {english: value.first, japanese: value.last}}
-    #binding.pry
     final_result.push(hash)
   end
   final_result = final_result.reduce Hash.new, :merge
@@ -43,5 +42,3 @@ def get_english_meaning(ymlpage, emoticon)
   end
   return "Sorry, that emoticon was not found"
 end
-
-#load_library('./lib/emoticons.yml')
