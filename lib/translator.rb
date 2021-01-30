@@ -2,13 +2,12 @@
 require "yaml"
 require "pry"
 
-  english = "english_emoticon"
-  japanese = "japanese_emoticon"
-
 def load_library(ymlpage)
   # code goes here
-
+  english = "english_emoticon"
+  japanese = "japanese_emoticon"
   final_result = [ ]
+  
   emoticons = YAML.load_file(ymlpage)
   emoticons.each_with_object({}) do |(key, value)|
     hash = {"#{key}" => {english: value.first, japanese: value.last}}
@@ -24,7 +23,7 @@ def get_japanese_emoticon(ymlpage, emoticon)
   j_emoji = ""
   emoticons = load_library('./lib/emoticons.yml')
   emoticons.each_with_object({}) do |(key, value)|
-    j_emoji = emoticons.dig(key, japanese)
+    j_emoji = emoticons.dig(key, japanese:)
     #binding.pry
   end
   return j_emoji
