@@ -23,7 +23,7 @@ def get_japanese_emoticon(ymlpage, emoticon)
   j_emoji = ""
   emoticons = load_library('./lib/emoticons.yml')
   emoticons.each_with_object({}) do |(key, value)|
-    j_emoji = emoticons.dig(key, japanese:)
+    j_emoji = emoticons.dig(key, :japanese)
     #binding.pry
   end
   return j_emoji
