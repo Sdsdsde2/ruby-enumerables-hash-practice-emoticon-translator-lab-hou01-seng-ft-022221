@@ -26,7 +26,7 @@ def get_japanese_emoticon(ymlpage, emoticon)
     if emoticons.dig(key, :japanese) == emoticon
       j_emoji = emoticons.dig(key, :japanese)
     end
-    #binding.pry
+    binding.pry
   end
   return j_emoji
 end
