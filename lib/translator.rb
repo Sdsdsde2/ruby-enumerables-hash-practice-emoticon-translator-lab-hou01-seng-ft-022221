@@ -26,10 +26,12 @@ def get_japanese_emoticon(ymlpage, emoticon)
     
     if emoticons.dig(key, :english) == emoticon
       j_emoji = emoticons.dig(key, :japanese)
+      return j_emoji
     end
-    binding.pry
+    #binding.pry
   end
-  return j_emoji
+  
+  #return j_emoji
 end
 
 def get_english_meaning
