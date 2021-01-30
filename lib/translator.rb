@@ -31,8 +31,17 @@ def get_japanese_emoticon(ymlpage, emoticon)
   return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(ymlpage, emoticon)
   # code goes here
+  emoji_meaning = ""
+  emoticons = load_library('./lib/emoticons.yml')
+  emoticons.each_with_object({}) do |(key, value)|
+    if emoticons.dig(key, :english) == emoticon
+      emoji_meaning = emoticons.dig(key)
+      return emoji_meaning
+    end
+  end
+  return "Sorry, that emoticon was not found"
 end
 
 #load_library('./lib/emoticons.yml')
