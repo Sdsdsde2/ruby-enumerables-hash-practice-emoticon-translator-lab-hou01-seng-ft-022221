@@ -29,7 +29,8 @@ def get_japanese_emoticon(ymlpage, emoticon)
       return j_emoji
     end
   end
-  return "Sorry, that emoticon was not found"moji
+  return "Sorry, that emoticon was not found"
+  #return j_emoji
 end
 
 def get_english_meaning
