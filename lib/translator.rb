@@ -24,10 +24,10 @@ def get_japanese_emoticon(ymlpage, emoticon)
   emoticons = load_library('./lib/emoticons.yml')
   emoticons.each_with_object({}) do |(key, value)|
     
-    j_emoji = emoticons.dig(key, japanese)
+    emoticons.dig(key, japanese)
     binding.pry
   end
-  return j_emoji
+  #return j_emoji
 end
 
 def get_english_meaning
