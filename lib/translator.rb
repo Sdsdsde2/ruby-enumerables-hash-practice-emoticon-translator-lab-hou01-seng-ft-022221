@@ -36,7 +36,7 @@ def get_english_meaning(ymlpage, emoticon)
   emoji_meaning = ""
   emoticons = load_library('./lib/emoticons.yml')
   emoticons.each_with_object({}) do |(key, value)|
-    if emoticons.dig(key, :english) == emoticon
+    if emoticons.dig(key, :japanese) == emoticon
       emoji_meaning = emoticons.dig(key)
       return emoji_meaning
     end
