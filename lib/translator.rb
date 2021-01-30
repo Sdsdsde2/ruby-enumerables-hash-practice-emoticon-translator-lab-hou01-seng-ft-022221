@@ -38,6 +38,7 @@ def get_english_meaning(ymlpage, emoticon)
   emoticons.each_with_object({}) do |(key, value)|
     if emoticons.dig(key, :japanese) == emoticon
       emoji_meaning = emoticons.dig(key)
+      binding.pry
       return emoji_meaning
     end
   end
